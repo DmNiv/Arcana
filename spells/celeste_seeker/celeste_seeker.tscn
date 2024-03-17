@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0fv5514dv3gd"]
+
+[ext_resource type="Script" path="res://spells/celeste_seeker/celeste_seeker.gd" id="1_4wojj"]
+
+[node name="CelesteSeeker" type="Node2D"]
+script = ExtResource("1_4wojj")

@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3ovpscvwq411"]
+
+[ext_resource type="Texture2D" uid="uid://t51t78mv7ep4" path="res://star.png" id="1_4jpx1"]
+[ext_resource type="Script" path="res://spells/celeste_seeker/celeste_scene.gd" id="1_vm00d"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_le5ay"]
+radius = 25.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8hnba"]
+radius = 20.025
+
+[node name="celeste_scene" type="CharacterBody2D" groups=["Celeste"]]
+script = ExtResource("1_vm00d")
+
+[node name="star_area" type="Area2D" parent="."]
+collision_layer = 24
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="star_area"]
+shape = SubResource("CircleShape2D_le5ay")
+
+[node name="collision_area" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision_area"]
+shape = SubResource("CircleShape2D_8hnba")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.0422222, 0.0422222)
+texture = ExtResource("1_4jpx1")
+
+[connection signal="area_entered" from="star_area" to="." method="_on_star_area_area_entered"]
+[connection signal="area_exited" from="star_area" to="." method="_on_star_area_area_exited"]
+[connection signal="body_entered" from="collision_area" to="." method="_on_collision_area_body_entered"]

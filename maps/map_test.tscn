@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://nw7rwotltehu"]
+
+[ext_resource type="PackedScene" uid="uid://dsiintito4jkt" path="res://spells/spell_cooldown.tscn" id="1_yns6p"]
+[ext_resource type="PackedScene" uid="uid://dsveo0y4pkq2h" path="res://spells/area.tscn" id="2_gkwga"]
+[ext_resource type="PackedScene" uid="uid://b25mcet0h2j2f" path="res://player/player.tscn" id="2_y4174"]
+[ext_resource type="PackedScene" uid="uid://d01i3vuano4mt" path="res://enemy/enemy_bot.tscn" id="3_aepv3"]
+
+[node name="mapTest" type="Node2D"]
+
+[node name="SpellCooldown" parent="." instance=ExtResource("1_yns6p")]
+
+[node name="area" parent="." instance=ExtResource("2_gkwga")]
+
+[node name="player" parent="." instance=ExtResource("2_y4174")]
+
+[node name="EnemyBot" parent="." instance=ExtResource("3_aepv3")]
+position = Vector2(266, 0)

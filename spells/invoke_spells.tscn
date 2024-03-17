@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://esmn7xjrwmc7"]
+
+[ext_resource type="Script" path="res://spells/InvokeSpells.gd" id="1_wenoy"]
+
+[node name="InvokeSpells" type="Node" groups=["Invoke"]]
+script = ExtResource("1_wenoy")

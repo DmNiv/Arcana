@@ -1,0 +1,61 @@
+[gd_scene load_steps=9 format=3 uid="uid://b25mcet0h2j2f"]
+
+[ext_resource type="Script" path="res://player/player.gd" id="1_duyva"]
+[ext_resource type="PackedScene" uid="uid://djtlollwymtpm" path="res://spells/spell_system.tscn" id="2_nelua"]
+[ext_resource type="Texture2D" uid="uid://dakybn7eu1m23" path="res://icon.svg" id="2_r4ujh"]
+[ext_resource type="PackedScene" uid="uid://86c8p7picsx0" path="res://spells/spell_slot.tscn" id="3_xp7ot"]
+[ext_resource type="PackedScene" uid="uid://esmn7xjrwmc7" path="res://spells/invoke_spells.tscn" id="4_rpdxc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r4ij4"]
+radius = 82.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lw8ep"]
+radius = 82.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_p7ggl"]
+font_size = 32
+
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_duyva")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_r4ij4")
+
+[node name="area" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 8
+
+[node name="cast_area" type="CollisionShape2D" parent="area"]
+unique_name_in_owner = true
+shape = SubResource("CircleShape2D_lw8ep")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -314.0
+offset_top = -142.0
+offset_right = 314.0
+offset_bottom = -73.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_p7ggl")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Systems" type="Node" parent="."]
+
+[node name="SpellSystem" parent="Systems" instance=ExtResource("2_nelua")]
+
+[node name="SpellSlot" parent="Systems" instance=ExtResource("3_xp7ot")]
+
+[node name="InvokeSpells" parent="Systems" instance=ExtResource("4_rpdxc")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_r4ujh")
+
+[node name="Camera2D" type="Camera2D" parent="."]

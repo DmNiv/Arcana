@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dsiintito4jkt"]
+
+[node name="SpellCooldown" type="Node" groups=["Cooldown"]]
+
+[node name="CelesteCooldown" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="LightningCooldown" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
