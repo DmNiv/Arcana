@@ -2,16 +2,16 @@ extends Node2D
 
 
 func _process(delta):
-	var mouse_pos = get_global_mouse_position()
 	var enemy = get_tree().get_first_node_in_group("Enemy") as Node2D
-	var player = get_tree().get_first_node_in_group("Player") as Node2D
+	var mouse_pos = get_global_mouse_position()
 	if Input.is_action_just_pressed("mouseLeft"):
-		if mouse_pos.distance_squared_to(enemy.global_position) < pow(enemy.get_area(), 2):
-			return
 		var cooldown = get_tree().get_first_node_in_group("Cooldown").get_node("CelesteCooldown") as Timer
 		if cooldown.time_left > 0:
 			print("Celeste Seeker em cooldown!\nDisponível em: {time}".format({"time": floor(cooldown.time_left)}))
 			return
+		if mouse_pos.distance_squared_to(enemy.global_position) < pow(enemy.get_area(), 2):
+			return
+		var player = get_tree().get_first_node_in_group("Player") as Node2D
 		var root = get_tree().get_root()
 		var angle = 0
 		for i in range(3):

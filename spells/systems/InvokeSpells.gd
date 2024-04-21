@@ -6,13 +6,13 @@ extends Node
 func spell(combination):
 	match combination:
 		"QQQ":
-			spell_load = preload("res://spells/lightning_strike.tscn").instantiate()
+			spell_load = preload("res://spells/lightning_strike/lightning_strike.tscn").instantiate()
 		"QQW":
 			return ("A")
 		"EQQ":
 			return ("B")
 		"QQR":
-			return ("s")
+			spell_load = preload("res://spells/thunder/thunder.tscn").instantiate()
 		"QWW":
 			return ("s")
 		"EQW":
@@ -24,7 +24,7 @@ func spell(combination):
 		"EQR":
 			return ("s")
 		"QRR":
-			return ("s")
+			spell_load = preload("res://spells/teleport/teleport.tscn").instantiate()
 		"WWW":
 			return ("s")
 		"EWW":

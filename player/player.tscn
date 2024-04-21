@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://b25mcet0h2j2f"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_duyva"]
-[ext_resource type="PackedScene" uid="uid://djtlollwymtpm" path="res://spells/spell_system.tscn" id="2_nelua"]
+[ext_resource type="PackedScene" uid="uid://djtlollwymtpm" path="res://spells/systems/spell_system.tscn" id="2_nelua"]
 [ext_resource type="Texture2D" uid="uid://dakybn7eu1m23" path="res://icon.svg" id="2_r4ujh"]
-[ext_resource type="PackedScene" uid="uid://86c8p7picsx0" path="res://spells/spell_slot.tscn" id="3_xp7ot"]
-[ext_resource type="PackedScene" uid="uid://esmn7xjrwmc7" path="res://spells/invoke_spells.tscn" id="4_rpdxc"]
+[ext_resource type="PackedScene" uid="uid://86c8p7picsx0" path="res://spells/systems/spell_slot.tscn" id="3_xp7ot"]
+[ext_resource type="PackedScene" uid="uid://esmn7xjrwmc7" path="res://spells/systems/invoke_spells.tscn" id="4_rpdxc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r4ij4"]
 radius = 82.0

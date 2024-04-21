@@ -9,3 +9,11 @@ one_shot = true
 [node name="LightningCooldown" type="Timer" parent="."]
 wait_time = 10.0
 one_shot = true
+
+[node name="TeleportCooldown" type="Timer" parent="."]
+wait_time = 15.0
+one_shot = true
+
+[node name="ThunderCooldown" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true

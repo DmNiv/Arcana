@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://sa2tn50epk4o"]
+
+[ext_resource type="Script" path="res://spells/thunder/thunder_scene.gd" id="1_15cvx"]
+
+[node name="ThunderScene" type="Node2D"]
+script = ExtResource("1_15cvx")
